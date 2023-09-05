@@ -1,3 +1,6 @@
 import './styles.css';
+import addScore from './addscore';
 
-console.log('Hello World!');
+const addButton = document.querySelector('.submit');
+
+addButton.addEventListener('click', addScore);
