@@ -9,7 +9,6 @@ const addScore = (e) => {
   const data = JSON.parse(localStorage.getItem('data')) || [];
   data.push(obj);
   localStorage.setItem('data', JSON.stringify(data));
-  //displayScore();
   name.value = '';
   score.value = '';
 };
