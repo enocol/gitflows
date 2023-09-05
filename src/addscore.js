@@ -1,5 +1,3 @@
-import displayScore from './displayScore';
-
 const addScore = (e) => {
   e.preventDefault();
   const name = document.getElementById('name');

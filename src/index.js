@@ -1,5 +1,5 @@
 import './styles.css';
-import addScore from './addscore';
+import addScore from './addscore.js';
 
 const addButton = document.querySelector('.submit');
 

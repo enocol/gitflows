@@ -36,17 +36,7 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _displayScore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayScore */ \"./src/displayScore.js\");\n\nvar addScore = function addScore(e) {\n  e.preventDefault();\n  var name = document.getElementById('name');\n  var score = document.getElementById('score');\n  if (name.value === '' || score.value === '') return;\n  var obj = {\n    name: name.value,\n    score: score.value\n  };\n  var data = JSON.parse(localStorage.getItem('data')) || [];\n  data.push(obj);\n  localStorage.setItem('data', JSON.stringify(data));\n  //displayScore();\n  name.value = '';\n  score.value = '';\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addScore);\n\n//# sourceURL=webpack://my-webpack-project/./src/addscore.js?");
-
-/***/ }),
-
-/***/ "./src/displayScore.js":
-/*!*****************************!*\
-  !*** ./src/displayScore.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar displayScore = function displayScore() {\n  var scorelist = document.querySelector('.scores-list');\n  var li = document.createElement('li');\n  var data = JSON.parse(localStorage.getItem('data'));\n  data.forEach(function (element) {\n    li.innerHTML = \"\".concat(element.name, \" \").concat(element.score);\n    scorelist.append(li);\n  });\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScore);\n\n//# sourceURL=webpack://my-webpack-project/./src/displayScore.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar addScore = function addScore(e) {\n  e.preventDefault();\n  var name = document.getElementById('name');\n  var score = document.getElementById('score');\n  if (name.value === '' || score.value === '') return;\n  var obj = {\n    name: name.value,\n    score: score.value\n  };\n  var data = JSON.parse(localStorage.getItem('data')) || [];\n  data.push(obj);\n  localStorage.setItem('data', JSON.stringify(data));\n  //displayScore();\n  name.value = '';\n  score.value = '';\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addScore);\n\n//# sourceURL=webpack://my-webpack-project/./src/addscore.js?");
 
 /***/ }),
 
@@ -56,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _addscore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addscore */ \"./src/addscore.js\");\n\n\nvar addButton = document.querySelector('.submit');\naddButton.addEventListener('click', _addscore__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _addscore_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addscore.js */ \"./src/addscore.js\");\n\n\nvar addButton = document.querySelector('.submit');\naddButton.addEventListener('click', _addscore_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
 
 /***/ }),
 
