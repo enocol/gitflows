@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const apiEndPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/HKlE8Ysavy1SaO4klV83/scores';
+const apiEndPoint =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/HKlE8Ysavy1SaO4klV83/scores';
 
 const refresh = async () => {
   const scoresList = document.querySelector('.scores-list');
@@ -8,7 +9,6 @@ const refresh = async () => {
   scoresList.innerHTML = data.result
     .map((element) => `<li>${element.user} : ${element.score}`)
     .join(' ');
-  // storeLocally();
 };
 
 export default refresh;
