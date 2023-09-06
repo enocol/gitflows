@@ -1,11 +1,12 @@
 const displayScore = () => {
   const scorelist = document.querySelector('.scores-list');
-  const li = document.createElement('li');
-  const data = JSON.parse(localStorage.getItem('data'));
-  data.forEach((element) => {
-    li.innerHTML = `${element.name} ${element.score}`;
-    scorelist.append(li);
-  });
+
+  const data = JSON.parse(localStorage.getItem('data')) || [];
+  const result = data.map(
+    (element) => `<li>${element.name} : ${element.score}</li>`
+  );
+  const join = result.join(' ');
+  scorelist.innerHTML = join;
 };
 
 export default displayScore;
