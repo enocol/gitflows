@@ -1,15 +1,28 @@
-const addScore = (e) => {
+import createScore from './createScore.js';
+import getScore from './getScore.js';
+import storeLocally from './storeLocally.js';
+
+const apiEndPoint =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/HKlE8Ysavy1SaO4klV83/scores';
+
+const addScore = async (e) => {
   e.preventDefault();
-  const name = document.getElementById('name');
+  const user = document.getElementById('name');
   const score = document.getElementById('score');
+  const scoreList = document.querySelector('.scores-list');
 
-  if (name.value === '' || score.value === '') return;
+  if (user.value === '' || score.value === '') return;
 
-  const obj = { name: name.value, score: score.value };
-  const data = JSON.parse(localStorage.getItem('data')) || [];
-  data.push(obj);
-  localStorage.setItem('data', JSON.stringify(data));
-  name.value = '';
+  const obj = { user: user.value, score: score.value };
+
+  createScore(apiEndPoint, obj);
+  const data = await getScore(apiEndPoint);
+  storeLocally(data);
+  scoreList.innerHTML = data
+    .map((element) => `<li>${element.user} : ${element.score}`)
+    .join(' ');
+
+  user.value = '';
   score.value = '';
 };
 
