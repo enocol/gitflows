@@ -1,3 +1,5 @@
+import displayScore from './displayScore.js';
+
 const addScore = (e) => {
   e.preventDefault();
   const name = document.getElementById('name');
@@ -11,6 +13,7 @@ const addScore = (e) => {
   localStorage.setItem('data', JSON.stringify(data));
   name.value = '';
   score.value = '';
+  displayScore();
 };
 
 export default addScore;
