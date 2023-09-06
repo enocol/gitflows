@@ -1,7 +1,7 @@
 import './styles.css';
 import addScore from './addscore.js';
-import getLocally from './getLocally';
-import refresh from './refresh';
+import getLocally from './getLocally.js';
+import refresh from './refresh.js';
 
 const addButton = document.querySelector('.submit');
 const refbtn = document.querySelector('.refresh');
