@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const apiEndPoint =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/HKlE8Ysavy1SaO4klV83/scores';
+const apiEndPoint = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/HKlE8Ysavy1SaO4klV83/scores';
 
 const refresh = async () => {
   const scoresList = document.querySelector('.scores-list');
