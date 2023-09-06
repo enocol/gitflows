@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 import createScore from './createScore.js';
 import getScore from './getScore.js';
 import storeLocally from './storeLocally.js';
+//import displayScore from './displayScore.js';
 
 const apiEndPoint =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/HKlE8Ysavy1SaO4klV83/scores';
 
 const addScore = async (e) => {
-=======
-import displayScore from './displayScore.js';
-
-const addScore = (e) => {
->>>>>>> dc942e5d77541cad4459e7f6469e80895079610e
   e.preventDefault();
   const user = document.getElementById('name');
   const score = document.getElementById('score');
@@ -30,7 +25,6 @@ const addScore = (e) => {
 
   user.value = '';
   score.value = '';
-  displayScore();
 };
 
 export default addScore;
