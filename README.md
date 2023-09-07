@@ -48,6 +48,9 @@
 - **[Basic styling for a leaderboard game]**
 - **[html template file created using the Webpack HTML plug-in]**
 - **[Input field for both name and score and a submit button]**
+- **[HTTP POST request to send data to leaderBoard API]**
+- **[HTTP GET request to get data from leaderboard API]**
+- **[A Refresh button to update the UI]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
