@@ -149,6 +149,7 @@ body {
   background: #fff;
   color: blue;
   border: 1px solid blue;
+  cursor: pointer;
 }
 
 .submit {
@@ -159,4 +160,5 @@ body {
   background: #fff;
   color: blue;
   border: 1px solid blue;
+  cursor: pointer;
 }
