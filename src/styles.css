@@ -61,6 +61,7 @@ body {
   margin: 10px;
   font-size: 16px;
   padding: 5px;
+  border: 1px solid blue;
 }
 
 .inputs {
@@ -68,12 +69,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.submit {
-  width: 50px;
-  align-self: end;
-  margin-right: 20px;
 }
 
 .form {
@@ -105,7 +100,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: burlywood;
 }
 
 .scores-list {
@@ -161,4 +156,6 @@ body {
   color: blue;
   border: 1px solid blue;
   cursor: pointer;
+  align-self: end;
+  margin-right: 20px;
 }
