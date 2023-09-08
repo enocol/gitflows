@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeaderBoard</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>LeaderBoard</h1>
+    </header>
+
+    <section class="section1">
+      <div class="leader-board">
+        <div class="board-heading">
+          <h2>Recent Scores</h2>
+
+          <button class="refresh" type="button">Refresh</button>
+        </div>
+        <div class="board">
+          <ul class="scores-list"></ul>
+        </div>
+      </div>
+
+      <form method="post" class="form">
+        <h2>Add your score</h2>
+        <div class="inputs">
+          <label for="name">
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name"
+              class="input"
+            />
+          </label>
+          <label for="score">
+            <input
+              type="text"
+              id="score"
+              placeholder=" Your score"
+              class="input"
+            />
+          </label>
+          <button type="submit" class="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
